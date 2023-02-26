@@ -1,0 +1,12 @@
+node_modules
+*.DS_Store
+.next
+.gitignore
+README.md
+.dockerignore
+LICENSE
+.docker
+.gitlab
+build
+/public/*.js
+/public/*.js.map

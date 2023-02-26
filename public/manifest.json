@@ -1,0 +1,32 @@
+{
+  "theme_color": "#3579f6",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Todo List - PWA",
+  "short_name": "Todo List - PWA",
+  "description": "Todo List Application",
+  "icons": [
+    {
+      "src": "/icons/Icon-App-76x76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/Icon-App-29x29.png",
+      "sizes": "29x29",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/Icon-App-40x40.png",
+      "sizes": "40x40",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/Icon-App-60x60.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    }
+  ]
+}
