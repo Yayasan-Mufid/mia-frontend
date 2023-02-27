@@ -26,6 +26,7 @@
     "axios": "^1.2.0",
     "dayjs": "^1.11.6",
     "eslint-config-next": "^13.0.4",
+    "firebase": "^9.17.1",
     "mantine-data-grid": "^0.0.21",
     "next": "^13.0.4",
     "next-pwa": "^5.6.0",

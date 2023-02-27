@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { Button, LoadingOverlay, createStyles } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconLogin } from '@tabler/icons';
@@ -7,7 +8,8 @@ import { InputPasswod, InputText } from '@/components/atoms/inputs';
 import useAuth from '@/hooks/api/auth/useAuth';
 import { LoginRequest, ErrorLoginResponse } from '@/types/api/auth';
 import useNotificationHook from '@/hooks/store/useNotification';
-import Image from 'next/image';
+import { signInWithGoogle } from '@/services/firebase/firebase';
+import { setAccessToken } from '@/services/local-storage/token-service';
 
 const useStyles = createStyles((theme) => ({
   groupForm: {
@@ -75,6 +77,16 @@ const LoginForm = () => {
       setLoginLoading(false);
     }
   };
+
+  const handleGoogleLogin = async () => {
+    const signIn = await signInWithGoogle();
+    const token = await signIn?.getIdToken();
+    if (token) {
+      setAccessToken(token);
+      router.push('/');
+    }
+  };
+
   return (
     <form onSubmit={form.onSubmit((values) => handleLogin(values))}>
       <LoadingOverlay visible={loginLoading} overlayBlur={2} />
@@ -116,6 +128,7 @@ const LoginForm = () => {
         variant="outline"
         fullWidth
         disabled={loginLoading}
+        onClick={handleGoogleLogin}
       >
         {' '}
         <span className={classes.textButtonPadding}>Google</span>
