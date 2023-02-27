@@ -2,7 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { Container } from '@mantine/core';
-import LoginCard from '@/components/features/auth/LoginCard';
+import LoginCard from '@/components/templates/auth/LoginCard';
 import { getAccessToken } from '@/services/local-storage/token-service';
 
 const Login: NextPage = () => {

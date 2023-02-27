@@ -3,15 +3,19 @@ import { useRouter } from 'next/router';
 import { Button, LoadingOverlay, createStyles } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconLogin } from '@tabler/icons';
-import { InputPasswod, InputText } from '@/components/commons/inputs';
+import { InputPasswod, InputText } from '@/components/atoms/inputs';
 import useAuth from '@/hooks/api/auth/useAuth';
 import { LoginRequest, ErrorLoginResponse } from '@/types/api/auth';
 import useNotificationHook from '@/hooks/store/useNotification';
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   groupForm: {
     marginBottom: theme.spacing.sm,
     marginTop: theme.spacing.sm,
+  },
+  textButtonPadding: {
+    paddingTop: 5,
   },
 }));
 
@@ -89,13 +93,32 @@ const LoginForm = () => {
         {...form.getInputProps('password')}
       />
       <Button
-        leftIcon={<IconLogin size={14} />}
+        leftIcon={<IconLogin size={20} />}
         size="md"
         type="submit"
+        fullWidth
         disabled={loginLoading}
       >
         {' '}
-        Login
+        <span className={classes.textButtonPadding}>Login</span>
+      </Button>
+      <Button
+        leftIcon={
+          <Image
+            src="/icons/svg/Google.svg"
+            width={18}
+            height={18}
+            alt="google-icons"
+          />
+        }
+        mt={5}
+        size="md"
+        variant="outline"
+        fullWidth
+        disabled={loginLoading}
+      >
+        {' '}
+        <span className={classes.textButtonPadding}>Google</span>
       </Button>
     </form>
   );

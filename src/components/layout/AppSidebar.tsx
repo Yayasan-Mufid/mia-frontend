@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, ScrollArea, createStyles } from '@mantine/core';
 import { listsMenu } from '@/services/menu/icon-lists';
-import { LinksGroup } from '../commons/navbar/LinksGroup';
+import { LinksGroup } from '../atoms/navbar/LinksGroup';
 import { getAllSidebar } from '@/store/features/sidebar/slice';
 import { useSelector } from 'react-redux';
 
