@@ -7,10 +7,7 @@ import { useSelector } from 'react-redux';
 
 const useStyles = createStyles((theme) => ({
   navbar: {
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.colors.dark[6]
-        : theme.colors.gray[0],
+    backgroundColor: '#111',
     paddingBottom: 0,
   },
 
@@ -19,10 +16,8 @@ const useStyles = createStyles((theme) => ({
     paddingTop: 0,
     marginLeft: -theme.spacing.xs,
     marginRight: -theme.spacing.xs,
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    borderBottom: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
-    }`,
+    color: '#111',
+    borderBottom: '1px solid #111',
   },
 
   links: {

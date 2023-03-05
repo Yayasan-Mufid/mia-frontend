@@ -38,7 +38,7 @@ const AppLayout = ({ title, children, pageTitle, backButton }: Props) => {
   return (
     <>
       <Head>
-        <title>{title} | Beranda Toko</title>
+        <title>{title} | Mufid</title>
       </Head>
       {!loggedOut && (
         <AppShell

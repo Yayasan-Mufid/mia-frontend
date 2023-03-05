@@ -34,9 +34,19 @@ const useStyles = createStyles((theme) => ({
     height: '100%',
     justifyContent: 'space-between',
     margin: 0,
+    backgroundColor: '#ed1b24',
+    color: 'white',
+    fontWeight: 700,
   },
   logoutStyle: {
-    paddingTop: 4,
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    ':hover': {
+      color: 'black',
+    },
   },
 }));
 
@@ -59,12 +69,13 @@ const AppHeader = ({ opened, handlerOpen }: AppHeaderProps) => {
             />
           </MediaQuery>
           <Text ml={10} mt={5}>
-            Beranda Toko
+            MIA | Mufid
           </Text>
         </Group>
         <Button
           size="xs"
           leftIcon={<IconLogout size={18} />}
+          className={classes.logoutStyle}
           onClick={logout}
           variant="subtle"
           compact
