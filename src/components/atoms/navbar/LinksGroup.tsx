@@ -19,15 +19,12 @@ const useStyles = createStyles((theme) => ({
     display: 'block',
     width: '100%',
     padding: `${theme.spacing.xs}px ${theme.spacing.xs}px`,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
+    color: '#fff',
     fontSize: theme.fontSizes.sm,
 
     '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[7]
-          : theme.colors.gray[0],
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+      backgroundColor: '#444',
+      color: '#ddd',
     },
   },
 
@@ -39,20 +36,14 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: 31,
     marginLeft: 30,
     fontSize: theme.fontSizes.sm,
-    color:
-      theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
+    color: '#bbb',
     borderLeft: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
 
     '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[7]
-          : theme.colors.gray[0],
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+      backgroundColor: '#444',
+      color: '#ddd',
     },
   },
 
@@ -97,7 +88,7 @@ const LinksGroup = ({
       >
         <Group position="apart" spacing={0}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <ThemeIcon variant="light" size={30}>
+            <ThemeIcon variant="filled" color="dark" size={30}>
               <Icon size={18} />
             </ThemeIcon>
             <Box ml="md">{label}</Box>

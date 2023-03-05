@@ -15,36 +15,30 @@ export const listsMenu: ListMenuIcon[] = [
     links: [{ label: 'Home', link: '/' }],
   },
   {
-    label: 'Pages',
+    label: 'Pembayaran',
     icon: IconNotes,
     initiallyOpened: true,
-    links: [
-      { label: 'Default Redirect Page', link: '/redirect/default-redirect' },
-      { label: 'Register Redirect Page', link: '/redirect/register-redirect' },
-    ],
+    links: [{ label: 'Upload', link: '/payment/upload' }],
   },
   {
-    label: 'Reporting',
+    label: 'Ujian',
     icon: IconReport,
     initiallyOpened: true,
     links: [
-      { label: 'Report', link: '/reporting/report' },
-      { label: 'Audit', link: '/reporting/audit' },
+      { label: 'Ujian', link: '/ujian' },
+      { label: 'Hasil Ujian', link: '/ujian/report' },
     ],
   },
   {
-    label: 'Oauth',
+    label: 'Materi',
     icon: IconLock,
     initiallyOpened: true,
-    links: [
-      { label: 'Binding Oauth', link: '/oauth/binding' },
-      { label: 'Unbinding Oauth', link: '/oauth/unbinding' },
-    ],
+    links: [{ label: 'Materi', link: '/materi' }],
   },
   {
-    label: 'User',
+    label: 'Administrasi',
     icon: IconUsers,
     initiallyOpened: true,
-    links: [{ label: 'Create User', link: '/user/create' }],
+    links: [{ label: 'Create User', link: '/admin/create' }],
   },
 ];
